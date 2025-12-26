@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+  <div class="cloud-container" id="cloudContainer"></div>
+  <div class="rain-container" id="rainContainer"></div>
+  
+  <div class="weather-app-container">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <div class="weather-app">
+        <div class="row g-3 mb-3 mb-md-4 align-items-center">
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="app-header">
+              <h1 class="mb-0">Weather Forecast</h1>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6 col-lg-7">
+            <div class="search-box">
+              <div class="search-input-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input id="city" type="text" class="form-control" placeholder="Enter city name..." />
+              </div>
+              <button onclick="getWeather()" class="search-btn btn">
+                <span>Search</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-md-4">
+          <div class="col-12 col-lg-8 col-xl-9">
+            <div class="dashboard-main">
+              <div id="result" class="result mb-3 mb-md-4">
+                <div class="welcome-message">
+                  <div class="welcome-icon">🌍</div>
+                  <p>Search for a city to see the weather</p>
+                </div>
+              </div>
+
+              <div id="forecast" class="forecast-container" style="display: none;"></div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-lg-4 col-xl-3">
+            <div class="dashboard-sidebar">
+              <div class="search-history-section">
+                <h2 class="section-title">📋 History</h2>
+                <div id="searchHistory" class="search-history-container">
+                  <div class="no-history">No search history yet</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
